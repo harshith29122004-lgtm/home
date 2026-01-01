@@ -1,134 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshith | Software Developer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Harshith | Full Stack Developer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-        header {
-            background-color: #111;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+html{
+  scroll-behavior:smooth;
+}
 
-        header h1 {
-            font-size: 36px;
-        }
+body{
+  background:#0b0b0b;
+  color:#fff;
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #aaa;
-        }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
 
-        section {
-            background: white;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 8px;
-        }
+nav h1{
+  font-size:22px;
+  font-weight:700;
+}
 
-        section h2 {
-            margin-bottom: 15px;
-            color: #111;
-        }
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #111;
-            color: white;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
 
-        .project {
-            margin-bottom: 15px;
-        }
+nav ul li a:hover{
+  color:#ff4d5a;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  background:radial-gradient(circle at top right,#1a1a1a,#000);
+}
 
-        a {
-            color: #111;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+.hero-content{
+  max-width:650px;
+}
+
+.hero-content h2{
+  font-size:48px;
+  font-weight:700;
+}
+
+.hero-content h2 span{
+  color:#ff4d5a;
+}
+
+.hero-content p{
+  margin:20px 0;
+  line-height:1.7;
+  color:#ccc;
+}
+
+.hero-buttons a{
+  display:inline-block;
+  margin-right:15px;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn-primary{
+  background:#ff4d5a;
+  color:#fff;
+}
+
+.btn-outline{
+  border:2px solid #ff4d5a;
+  color:#ff4d5a;
+}
+
+/* SECTION */
+section{
+  padding:80px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:36px;
+}
+
+.section-title span{
+  color:#ff4d5a;
+}
+
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  color:#ccc;
+  line-height:1.8;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.skill{
+  background:#111;
+  padding:15px;
+  text-align:center;
+  border-radius:8px;
+  border:1px solid #222;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.project{
+  background:#111;
+  padding:25px;
+  border-radius:10px;
+  border:1px solid #222;
+}
+
+.project h3{
+  margin-bottom:10px;
+}
+
+.project p{
+  color:#bbb;
+  font-size:14px;
+}
+
+.project a{
+  display:inline-block;
+  margin-top:15px;
+  color:#ff4d5a;
+  text-decoration:none;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  color:#ff4d5a;
+  text-decoration:none;
+  display:block;
+  margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Harshith</h1>
-    <p>Software Developer | Full Stack Developer</p>
-</header>
+<nav>
+  <h1>Harshith</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section>
-    <h2>About Me</h2>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Hi, I'm <span>Harshith</span></h2>
     <p>
-        I am a passionate software developer with hands-on experience in building
-        full-stack web applications and Android apps. I enjoy problem-solving,
-        learning new technologies, and writing clean, maintainable code.
+      Full Stack Developer building modern web and Android applications.
+      Passionate about clean code, performance, and real-world projects.
     </p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>Node.js</span>
-        <span>Express</span>
-        <span>MongoDB</span>
-        <span>Java</span>
-        <span>Kotlin</span>
-        <span>HTML</span>
-        <span>CSS</span>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
     </div>
+  </div>
 </section>
 
-<section>
-    <h2>Project</h2>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title">
+    <h2>About <span>Me</span></h2>
+  </div>
+  <div class="about">
+    I am a Full Stack Developer with hands-on experience in React, Node.js,
+    MongoDB, and Android development. I enjoy solving problems, learning new
+    technologies, and building scalable applications.
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-title">
+    <h2>My <span>Skills</span></h2>
+  </div>
+  <div class="skills">
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">Express</div>
+    <div class="skill">MongoDB</div>
+    <div class="skill">Java</div>
+    <div class="skill">Kotlin</div>
+    <div class="skill">HTML & CSS</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-title">
+    <h2>My <span>Projects</span></h2>
+  </div>
+  <div class="projects">
     <div class="project">
-        <h3>Contact Management System</h3>
-        <p>
-            A full-stack web application that allows users to securely manage contacts.
-            Includes authentication, CRUD operations, and a responsive UI.
-        </p>
-        <p><b>Tech Stack:</b> React, Node.js, Express, MongoDB</p>
+      <h3>Contact Management System</h3>
+      <p>
+        Secure full-stack app with authentication, CRUD operations,
+        and responsive UI.
+      </p>
+      <a href="#">GitHub →</a>
     </div>
+
+    <div class="project">
+      <h3>Betting Website</h3>
+      <p>
+        Full betting platform with authentication, matches,
+        casino section, and admin logic.
+      </p>
+      <a href="#">GitHub →</a>
+    </div>
+
+    <div class="project">
+      <h3>Android Expense Tracker</h3>
+      <p>
+        Android app using Kotlin to track expenses with categories
+        and analytics.
+      </p>
+      <a href="#">GitHub →</a>
+    </div>
+  </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: harshith@email.com</p>
-    <p>GitHub: <a href="#">github.com/yourusername</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/yourusername</a></p>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title">
+    <h2>Contact <span>Me</span></h2>
+  </div>
+  <div class="contact">
+    <a href="mailto:harshith@email.com">📧 harshith@email.com</a>
+    <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
+  </div>
 </section>
 
 <footer>
-    <p>© 2025 Harshith | Software Developer</p>
+  Built with ❤️ by Harshith | © 2025
 </footer>
 
 </body>
